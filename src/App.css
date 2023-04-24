@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
+.cnt3 {
+    height: 40vmax;
+    width: 88vmax;
+    display: flex;
+    margin: 1vmax 0vmax 1vmax 1vmax;
+    background-color: rgba(48, 48, 48, 0.541);
+    border-radius: 5px;
+    position: relative;
+    /* -webkit-transition: all 2s cubic-bezier(0.5, -0.005, 0.2, 1) !important;
+  transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) !important; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cnt3 .singleImg {
+    border-radius: 0.5vmax;
+    margin: 0.5vmax;
+    z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.backdropImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.3;
+    filter: blur(2px);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.singlecontent {
+    height: 100%;
+    width: 100%;
+    padding: 1vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.singletrailer {
+    height: 2.5vmax;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a003d;
+    border-radius: 0.3vmax;
+    font-size: 1.5vmax;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.25vmax;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.singletrailer:hover {
+    background-color: #0e0052;
+    transform: scale(1.02);
+}
+
+.singletitle {
+    font-size: 3vmax;
+    font-family: roboto;
+    font-weight: bold;
+    letter-spacing: 0.2vmax;
+}
+
+.singledate {
+    font-size: 1.3vmax;
+    font-family: sofia sans;
+    color: rgb(162, 162, 162);
+}
+
+.overview {
+    font-family: sofia sans;
+    height: 10vmax;
+}
+
+.overview u {
+    cursor: pointer;
+}
+
+.genres {
+    font-family: sofia sans;
+    font-size: 1.5vmax;
+    color: rgb(162, 162, 162);
+    display: flex;
+}
+
+.genre {
+    margin: 0.5vmax;
+    padding: 0.5vmax;
+    border-radius: 0.5vmax;
+    background-color: rgb(56, 56, 56);
+    cursor: pointer;
+}
+
+.genre:hover {
+    background-color: rgb(17, 2, 181);
+}
+
+.actions-cnt {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    position: relative;
+}
+
+.actions-cnt span {
+    width: 4vmax;
+    margin-right: 2vmax;
+    font-size: 1.3vmax;
+    font-family: sofia sans;
+    font-weight: bold;
+}
+
+.bi-list-ul,
+.bi-suit-heart-fill,
+.bi-bookmark-fill,
+.bi-star-fill {
+    font-size: 1vmax;
+    color: white;
+    cursor: pointer;
+    padding: 1vmax;
+    background-color: #0a003d;
+    border-radius: 5vmax;
+}
+
+.bi-list-ul:hover::after,
+.bi-suit-heart-fill:hover::after,
+.bi-bookmark-fill:hover::after,
+.bi-star-fill:hover::after {
+    content: attr(data-bs-original-title);
+    position: absolute;
+    top: 4.2vmax;
+    background-color: #0a003d;
+    color: white;
+    padding: 0.5vmax;
+    border-radius: 0.5vmax;
+    font-family: sofia sans;
+    z-index: 1;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.tagline {
+    font-family: sofia sans;
+    font-size: 1.5vmax;
+    color: rgb(162, 162, 162);
+}
+
+.rating {
+    width: 5vmax;
+    height: 5vmax;
+    background-color: #191818;
+    border-radius: 5vmax;
+    padding: 0.3vmax;
+    cursor: pointer;
+}
+
+.rating:hover {
+    transform: scale(1.05);
+}
+
+.head {
+    font-size: 2.5vmax;
+    font-family: sofia sans;
+    color: rgb(255, 255, 255);
+}
+
+.production-team {
+    width: 87vmax;
+    font-family: sofia sans;
+    border-radius: 0.5vmax;
+    padding: 1vmax;
+    margin: 1vmax 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(40, 40, 40);
+}
+
+.production-name {
+    font-size: 1vmax;
+    color: rgb(162, 162, 162);
+    margin-top: 0.5vmax;
+}
+
+.production {
+    margin: 1vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.production img {
+    width: 15vmax;
+    border-radius: 5vmax;
+    margin-right: 1vmax;
+}
+
+@media (max-width: 600px) {
+    .cnt3 {
+        flex-direction: column;
+        align-items: center;
+        height: 100vmax;
+    }
+
+    .singleImg {
+        width: unset;
+        height: 50%;
+    }
+
+    .star,
+    .date,
+    .title {
+        font-size: 1.9vmax;
+    }
 }

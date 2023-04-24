@@ -1,0 +1,72 @@
+.card{
+    width: 90%;
+    height: 0.3vmax;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "gilroy";
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#back{
+    width: 10%;
+}
+
+#name {
+    position: relative;
+    top: 10%;
+    font-family: Gilroy ExtraBold;
+    left: 30%;
+}
+
+#Tname {
+    position: relative;
+    top: 12%;
+    font-family: Gilroy;
+    left: 30%;
+}
+
+#Rdate {
+    position: relative;
+    top: -55%;
+    font-family: Bold Gilroy;
+    left: 30%;
+}
+
+#Over {
+    position: relative;
+    top: -54%;
+    font-family: Bold Gilroy;
+    left: 30%;
+}
+
+#Stat {
+    position: relative;
+    top: -60%;
+    font-family: Gilroy;
+    left: 30%;
+}
+
+#Gen {
+    position: relative;
+    top: -54%;
+    font-family: Bold Gilroy;
+    left: 30%;
+}
+
+#back {
+    opacity: 0.5;
+}
+
+#poster {
+    width: 22vmax;
+    border-radius: 10px;
+}
